@@ -1,4 +1,63 @@
-# `ii`
+# Internet Identity Integration Sample
+
+This project demonstrates the integration of Internet Identity (II) authentication into an Internet Computer application, following the tutorial from [DFINITY's Internet Identity Integration Guide](https://internetcomputer.org/docs/current/developer-docs/identity/internet-identity/integrate-internet-identity).
+
+## Features
+
+- Internet Identity authentication
+- Simple "Who am I?" functionality to display user principal
+- Local development environment setup
+
+## Getting Started
+
+### Prerequisites
+
+- Install the IC SDK
+- Node.js and npm
+
+### Local Development
+
+1. Start the local replica:
+
+```bash
+dfx start --background
+```
+
+2. Deploy the canisters:
+
+```bash
+dfx deploy
+```
+
+3. For frontend development with hot-reloading:
+
+```bash
+npm start
+```
+
+This will start a development server at `http://localhost:3000`
+
+### Internet Identity Configuration
+
+The project includes a local instance of the Internet Identity canister for development purposes. When deployed locally, you'll be able to create test identities that should not be used in production.
+
+## Project Structure
+
+- `src/ii_backend/` - Motoko backend canister
+- `src/ii_frontend/` - Frontend application code
+- Internet Identity integration using `@dfinity/auth-client`
+
+## Testing
+
+The project can be tested using the Internet Identity Playwright plugin. See the [official documentation](https://internetcomputer.org/docs/current/developer-docs/identity/internet-identity/integrate-internet-identity#end-to-end-testing) for more details on setting up end-to-end tests.
+
+## Additional Resources
+
+- [Internet Identity Dashboard](https://identity.ic0.app/)
+- [Internet Identity Specification](https://internetcomputer.org/docs/current/references/ii-spec)
+- [Internet Identity GitHub Repository](https://github.com/dfinity/internet-identity)
+
+# Default README from `dfx new`
 
 Welcome to your new `ii` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
 
